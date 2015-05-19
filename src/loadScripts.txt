@@ -1,30 +1,51 @@
-# load Person(email)
+# load Person(email address)
 
-LOAD CSV WITH HEADERS FROM "https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/addresses.csv" AS csvLine
+LOAD CSV WITH HEADERS FROM "file:///home/colin/Downloads/data/addresses.csv" AS csvLine
 CREATE (p:Person { id: toInt(csvLine.id), email: csvLine.address })
 
 # load Emails
 
-LOAD CSV WITH HEADERS FROM "https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/emails.csv" AS csvLine
+LOAD CSV WITH HEADERS FROM "file:///home/colin/Downloads/data/emails.csv" AS csvLine
 CREATE (e:Email { id: toInt(csvLine.id), time: csvLine.time, content: csvLine.content })
 
-# create person-from->email-to->person relationships
-
-USING PERIODIC COMMIT 500
-LOAD CSV WITH HEADERS FROM "https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/relations.csv" AS csvLine
-MATCH (p1:Person { id: toInt(csvLine.fromId)}),(e:Email { id: toInt(csvLine.emailId)}),(p2:Person { id: toInt(csvLine.toId)})
-CREATE (p1)-[:FROM]->(e)
-CREATE (e)-[:TO]->(p2)
-
-
-
-
-
+# add index to make the program faster
 
 CREATE INDEX ON :Person(id);
-CREATE CONSTRAINT ON (p:Person) ASSERT p.id IS UNIQUE;
-CREATE CONSTRAINT ON (p:Person) ASSERT p.email IS UNIQUE;
 CREATE INDEX ON :Email(id);
-CREATE CONSTRAINT ON (e:Email) ASSERT e.id IS UNIQUE;
 
-DROP CONSTRAINT ON (person:Person) ASSERT person.id IS UNIQUE
+# create person-from->email-to->person relationships
+# create unique to make from relationships unique
+
+USING PERIODIC COMMIT 500
+LOAD CSV WITH HEADERS FROM "file:///home/colin/Downloads/data/relations.csv" AS csvLine
+MATCH (p1:Person { id: toInt(csvLine.fromId)}),(e:Email { id: toInt(csvLine.emailId)}),(p2:Person { id: toInt(csvLine.toId)})
+CREATE UNIQUE (p1)-[:FROM]->(e)
+CREATE (e)-[:TO]->(p2)
+
+# show all emails from p1: Person.Id = 1 send to p2:Person.Id = 2
+
+MATCH (p1:Person)-[r1:FROM]->(e:Email)-[r2:TO]->(p2:Person)
+WHERE p1.id = 1 and p2.id=2
+RETURN p1,e,p2,r1,r2
+
+# found some cases, the email receiver list contains its sender, remove these cycles
+
+MATCH (p1:Person)-[r1:FROM]->(e:Email)-[r2:TO]->(p1:Person)
+delete r2
+
+# filter on date. note: there's no Date type built in Neo4j. We can use regular expression here.
+
+MATCH (p1:Person)-[r1:FROM]->(e:Email)-[r2:TO]->(p2:Person)
+WHERE p1.id = 1 and p2.id=2 and e.time=~'^1/16/2014.*'
+RETURN p1,e,p2,r1,r2
+
+# find a email with the most receivers
+
+# find a person whose emails have the most average receivers
+
+
+
+
+
+
+

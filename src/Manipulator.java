@@ -55,5 +55,6 @@ public class Manipulator {
 
 		emails.generateCSV();
 
+		emails.countTopFrequentWords(20);
 	}
 }
