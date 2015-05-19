@@ -1,0 +1,6 @@
+CREATE INDEX ON :Person(id);
+
+CREATE CONSTRAINT ON (Person) ASSERT p.email IS UNIQUE;
+
+LOAD CSV WITH HEADERS FROM "file://Users/ColinMac/Documents/JavaWorkSpace/Neo4j_EmailHeader/data/addresses.csv" AS csvLine
+CREATE (p:Person { id: toInt(csvLine.id), email: csvLine.address })
