@@ -1,6 +1,30 @@
-CREATE INDEX ON :Person(id);
+# load Person(email)
 
-CREATE CONSTRAINT ON (Person) ASSERT p.email IS UNIQUE;
-
-LOAD CSV WITH HEADERS FROM "file://Users/ColinMac/Documents/JavaWorkSpace/Neo4j_EmailHeader/data/addresses.csv" AS csvLine
+LOAD CSV WITH HEADERS FROM "https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/addresses.csv" AS csvLine
 CREATE (p:Person { id: toInt(csvLine.id), email: csvLine.address })
+
+# load Emails
+
+LOAD CSV WITH HEADERS FROM "https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/emails.csv" AS csvLine
+CREATE (e:Email { id: toInt(csvLine.id), time: csvLine.time, content: csvLine.content })
+
+# create person-from->email-to->person relationships
+
+USING PERIODIC COMMIT 500
+LOAD CSV WITH HEADERS FROM "https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/relations.csv" AS csvLine
+MATCH (p1:Person { id: toInt(csvLine.fromId)}),(e:Email { id: toInt(csvLine.emailId)}),(p2:Person { id: toInt(csvLine.toId)})
+CREATE (p1)-[:FROM]->(e)
+CREATE (e)-[:TO]->(p2)
+
+
+
+
+
+
+CREATE INDEX ON :Person(id);
+CREATE CONSTRAINT ON (p:Person) ASSERT p.id IS UNIQUE;
+CREATE CONSTRAINT ON (p:Person) ASSERT p.email IS UNIQUE;
+CREATE INDEX ON :Email(id);
+CREATE CONSTRAINT ON (e:Email) ASSERT e.id IS UNIQUE;
+
+DROP CONSTRAINT ON (person:Person) ASSERT person.id IS UNIQUE

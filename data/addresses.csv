@@ -1,111 +1,56 @@
 id,address
 0,Sven.Flecha@gastech.com.kronos
 1,Isak.Baza@gastech.com.kronos
-2," Lucas.Alcazar@gastech.com.kronos"
+2,Lucas.Alcazar@gastech.com.kronos
 3,Kanon.Herrero@gastech.com.kronos
 4,Felix.Resumir@gastech.com.kronos
-5," Hideki.Cocinaro@gastech.com.kronos"
-6," Inga.Ferro@gastech.com.kronos"
-7," Varja.Lagos@gastech.com.kronos"
-8," Kanon.Herrero@gastech.com.kronos"
-9," Stenig.Fusil@gastech.com.kronos"
-10," Hennie.Osvaldo@gastech.com.kronos"
-11," Isia.Vann@gastech.com.kronos"
-12," Edvard.Vann@gastech.com.kronos"
-13," Loreto.Bodrogi@gastech.com.kronos"
-14,Bertrand.Ovan@gastech.com.kronos
-15,Emile.Arpa@gastech.com.kronos
-16," Varro.Awelon@gastech.com.kronos"
-17," Dante.Coginian@gastech.com.kronos"
-18," Albina.Hafon@gastech.com.kronos"
-19," Benito.Hawelon@gastech.com.kronos"
-20," Claudio.Hawelon@gastech.com.kronos"
-21," Henk.Mies@gastech.com.kronos"
-22," Valeria.Morlun@gastech.com.kronos"
-23," Adan.Morlun@gastech.com.kronos"
-24," Cecilia.Morluniau@gastech.com.kronos"
-25," Irene.Nant@gastech.com.kronos"
-26," Dylan.Scozzese@gastech.com.kronos"
-27,Valeria.Morlun@gastech.com.kronos
-28,Dante.Coginian@gastech.com.kronos
-29,Mat.Bramar@gastech.com.kronos
-30,Rachel.Pantanal@gastech.com.kronos
-31," Lars.Azada@gastech.com.kronos"
-32," Felix.Balas@gastech.com.kronos"
-33," Isande.Borrasca@gastech.com.kronos"
-34," Axel.Calzas@gastech.com.kronos"
-35," Gustav.Cazar@gastech.com.kronos"
-36," Lidelse.Dedos@gastech.com.kronos"
-37," Birgitta.Frente@gastech.com.kronos"
-38," Vira.Frente@gastech.com.kronos"
-39," Adra.Nubarron@gastech.com.kronos"
-40," Marin.Onda@gastech.com.kronos"
-41," Kare.Orilla@gastech.com.kronos"
-42," Elsa.Orilla@gastech.com.kronos"
-43," Brand.Tempestad@gastech.com.kronos"
-44," Ingrid.Barranco@gastech.com.kronos"
-45," Ada.Campo-Corrente@gastech.com.kronos"
-46," Sten.Sanjorge Jr.@gastech.com.kronos"
-47," Orhan.Strum@gastech.com.kronos"
-48," Willem.Vasco-Pais@gastech.com.kronos"
-49," Bertrand.Ovan@gastech.com.kronos"
-50," Isak.Baza@gastech.com.kronos"
-51," Linnea.Bergen@gastech.com.kronos"
-52," Nils.Calixto@gastech.com.kronos"
-53," Sven.Flecha@gastech.com.kronos"
-54," Minke.Mies@gastech.com.kronos"
-55," Felix.Resumir@gastech.com.kronos"
-56," Emile.Arpa@gastech.com.kronos"
-57," Mat.Bramar@gastech.com.kronos"
-58," Carla.Forluniau@gastech.com.kronos"
-59," Linda.Lagos@gastech.com.kronos"
-60," Cornelia.Lais@gastech.com.kronos"
-61," Ruscella.Mies.Haber@gastech.com.kronos"
-62," Anda.Ribera@gastech.com.kronos"
-63,Orhan.Strum@gastech.com.kronos
-64,Stenig.Fusil@gastech.com.kronos
-65,Varja.Lagos@gastech.com.kronos
-66,Brand.Tempestad@gastech.com.kronos
-67,Birgitta.Frente@gastech.com.kronos
-68,Lucas.Alcazar@gastech.com.kronos
-69,Linnea.Bergen@gastech.com.kronos
-70,Loreto.Bodrogi@gastech.com.kronos
-71,Ingrid.Barranco@gastech.com.kronos
-72,Nils.Calixto@gastech.com.kronos
-73,Sten.Sanjorge Jr.@gastech.com.tethys
-74," Rachel.Pantanal@gastech.com.kronos"
-75,Axel.Calzas@gastech.com.kronos
-76,Felix.Balas@gastech.com.kronos
-77,Lars.Azada@gastech.com.kronos
-78,Albina.Hafon@gastech.com.kronos
-79,Willem.Vasco-Pais@gastech.com.kronos
-80,Anda.Ribera@gastech.com.kronos
-81,Benito.Hawelon@gastech.com.kronos
-82,Adan.Morlun@gastech.com.kronos
-83,Carla.Forluniau@gastech.com.kronos
-84,Claudio.Hawelon@gastech.com.kronos
-85,Irene.Nant@gastech.com.kronos
-86,Hennie.Osvaldo@gastech.com.kronos
-87,Cornelia.Lais@gastech.com.kronos
-88,Cecilia.Morluniau@gastech.com.kronos
-89,Varro.Awelon@gastech.com.kronos
-90,Vira.Frente@gastech.com.kronos
-91,Isande.Borrasca@gastech.com.kronos
-92,Ruscella.Mies.Haber@gastech.com.kronos
-93,Adra.Nubarron@gastech.com.kronos
-94,Dylan.Scozzese@gastech.com.kronos
-95,Marin.Onda@gastech.com.kronos
-96,Ada.Campo-Corrente@gastech.com.kronos
-97,Lidelse.Dedos@gastech.com.kronos
-98,Elsa.Orilla@gastech.com.kronos
-99,Isia.Vann@gastech.com.kronos
-100,Inga.Ferro@gastech.com.kronos
-101,Henk.Mies@gastech.com.kronos
-102,Gustav.Cazar@gastech.com.kronos
-103,Hideki.Cocinaro@gastech.com.kronos
-104,Linda.Lagos@gastech.com.kronos
-105,Edvard.Vann@gastech.com.kronos
-106,Kare.Orilla@gastech.com.kronos
-107," Sten.Sanjorge Jr.@gastech.com.tethys"
-108,Minke.Mies@gastech.com.kronos
-109,Sten.Sanjorge Jr.@gastech.com.kronos
+5,Hideki.Cocinaro@gastech.com.kronos
+6,Inga.Ferro@gastech.com.kronos
+7,Varja.Lagos@gastech.com.kronos
+8,Stenig.Fusil@gastech.com.kronos
+9,Hennie.Osvaldo@gastech.com.kronos
+10,Isia.Vann@gastech.com.kronos
+11,Edvard.Vann@gastech.com.kronos
+12,Loreto.Bodrogi@gastech.com.kronos
+13,Bertrand.Ovan@gastech.com.kronos
+14,Emile.Arpa@gastech.com.kronos
+15,Varro.Awelon@gastech.com.kronos
+16,Dante.Coginian@gastech.com.kronos
+17,Albina.Hafon@gastech.com.kronos
+18,Benito.Hawelon@gastech.com.kronos
+19,Claudio.Hawelon@gastech.com.kronos
+20,Henk.Mies@gastech.com.kronos
+21,Valeria.Morlun@gastech.com.kronos
+22,Adan.Morlun@gastech.com.kronos
+23,Cecilia.Morluniau@gastech.com.kronos
+24,Irene.Nant@gastech.com.kronos
+25,Dylan.Scozzese@gastech.com.kronos
+26,Mat.Bramar@gastech.com.kronos
+27,Rachel.Pantanal@gastech.com.kronos
+28,Lars.Azada@gastech.com.kronos
+29,Felix.Balas@gastech.com.kronos
+30,Isande.Borrasca@gastech.com.kronos
+31,Axel.Calzas@gastech.com.kronos
+32,Gustav.Cazar@gastech.com.kronos
+33,Lidelse.Dedos@gastech.com.kronos
+34,Birgitta.Frente@gastech.com.kronos
+35,Vira.Frente@gastech.com.kronos
+36,Adra.Nubarron@gastech.com.kronos
+37,Marin.Onda@gastech.com.kronos
+38,Kare.Orilla@gastech.com.kronos
+39,Elsa.Orilla@gastech.com.kronos
+40,Brand.Tempestad@gastech.com.kronos
+41,Ingrid.Barranco@gastech.com.kronos
+42,Ada.Campo-Corrente@gastech.com.kronos
+43,Sten.Sanjorge Jr.@gastech.com.kronos
+44,Orhan.Strum@gastech.com.kronos
+45,Willem.Vasco-Pais@gastech.com.kronos
+46,Linnea.Bergen@gastech.com.kronos
+47,Nils.Calixto@gastech.com.kronos
+48,Minke.Mies@gastech.com.kronos
+49,Carla.Forluniau@gastech.com.kronos
+50,Linda.Lagos@gastech.com.kronos
+51,Cornelia.Lais@gastech.com.kronos
+52,Ruscella.Mies.Haber@gastech.com.kronos
+53,Anda.Ribera@gastech.com.kronos
+54,Sten.Sanjorge Jr.@gastech.com.tethys

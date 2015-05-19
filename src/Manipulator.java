@@ -28,7 +28,7 @@ public class Manipulator {
 			addresses.add(record.get(0));
 			e.fromId = addresses.getId(record.get(0));
 
-			String[] ss = record.get(1).split(",");
+			String[] ss = record.get(1).split(", ");
 			for (int j = 0; j < ss.length; j++) {
 				addresses.add(ss[j]);
 				e.toIds.add(addresses.getId(ss[j]));
