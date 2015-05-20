@@ -12,9 +12,9 @@ From, To, Date, Subject
 
 After processing, it comes to 3 files:
 
-addresses.csv:  all unique email addresses with id.
-emails.csv:     emails with id, date, subject.
-relations.csv   store all sender-from-email-to-receivers relationships.
+  * addresses.csv:  all unique email addresses with id.
+  * emails.csv:     emails with id, date, subject.
+  * relations.csv   store all sender-from-email-to-receivers relationships.
 
 This separation can help create nodes and relationships in Neo4j.
 
