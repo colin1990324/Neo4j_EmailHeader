@@ -7,14 +7,14 @@ The EmailHeader CSV data is part of [VAST2014 Challenge](http://vacommunity.org
 
 ### Data Preprocess
 
-The original data email_headers.csv contains 1170 records of email headers with 4 columns.
+The original data [email_headers.csv](https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/email%20headers.csv) contains 1170 records of email headers with 4 columns.
 From, To, Date, Subject
 
 After processing, it comes to 3 files:
 
-  * addresses.csv:  all unique email addresses with id.
-  * emails.csv:     emails with id, date, subject.
-  * relations.csv   store all sender-from-email-to-receivers relationships.
+  * [addresses.csv](https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/addresses.csv):  all unique email addresses with id.
+  * [emails.csv](https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/emails.csv):     emails with id, date, subject.
+  * [relations.csv](https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/relations.csv):   store all sender-from-email-to-receivers relationships.
 
 This separation can help create nodes and relationships in [Neo4j](http://neo4j.com/download/).
 
