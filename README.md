@@ -5,6 +5,19 @@ Github Repository  [https://github.com/colin1990324/Neo4j_EmailHeader](https://g
 
 The EmailHeader CSV data is part of VAST2014 Challenge dataset.
 
+### Data Preprocess
+
+The original data email_headers.csv contains 1170 records of email headers with 4 columns.
+From, To, Date, Subject
+
+After processing, it comes to 3 files:
+
+addresses.csv:  all unique email addresses with id.
+emails.csv:     emails with id, date, subject.
+relations.csv   store all sender-from-email-to-receivers relationships.
+
+This separation can help create nodes and relationships in Neo4j.
+
 ### clear old nodes and relationships
 -------------------------------------------------------------------------------
 
