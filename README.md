@@ -13,7 +13,7 @@ The EmailHeader CSV data is part of VAST2014 Challenge dataset.
     (n)-[r]-()
     DELETE n,r
 
-# load Person(email address)
+### load Person(email address)
 -------------------------------------------------------------------------------
 
     LOAD CSV WITH
@@ -23,7 +23,7 @@ The EmailHeader CSV data is part of VAST2014 Challenge dataset.
 
 Return 55 nodes.
 
-# load Emails
+### load Emails
 -------------------------------------------------------------------------------
 
     LOAD CSV WITH
@@ -33,17 +33,16 @@ Return 55 nodes.
 
 Return 1170 nodes.
 
-# add index to make the program faster
+### add index to make the program faster
 -------------------------------------------------------------------------------
 
     CREATE INDEX ON:Person(id);
 
     CREATE INDEX ON:Email(id);
 
-    # create person-from-&gt;email-to-&gt;person relationships
-
-# create unique to make from relationships unique
+### create person-from->email-to->person relationships
 -------------------------------------------------------------------------------
+create unique to make from relationships unique
 
     USING PERIODIC
     COMMIT 500
@@ -53,16 +52,16 @@ Return 1170 nodes.
 
     MATCH (p1:Person {id: toInt(csvLine.fromId)}),(e:Email { id: toInt(csvLine.emailId)}),(p2:Person{ id: toInt(csvLine.toId)})
 
-    CREATE UNIQUE (p1)-[:FROM]-&gt;(e)
+    CREATE UNIQUE (p1)-[:FROM]->(e)
 
-    CREATE(e)-[:TO]-&gt;(p2)
+    CREATE(e)-[:TO]->(p2)
 
 Created 10233 relationships, statement executed in 4567 ms.
 
-# show all emails from p1: Person.Id = 1 send to p2:Person.Id = 2
+### show all emails from p1: Person.Id = 1 send to p2:Person.Id = 2
 -------------------------------------------------------------------------------
 
-    MATCH (p1:Person)-[r1:FROM]-&gt;(e:Email)-[r2:TO]-&gt;(p2:Person)
+    MATCH (p1:Person)-[r1:FROM]->(e:Email)-[r2:TO]->(p2:Person)
     WHERE p1.id = 1 and p2.id=2
     RETURN p1,e,p2,r1,r2
 
@@ -70,9 +69,9 @@ Created 10233 relationships, statement executed in 4567 ms.
 
 Displaying 35 nodes, 98 relationships.
 
-# found some cases, the email receiver list contains its sender, remove these cycles
+### found some cases, the email receiver list contains its sender, remove these cycles
 
-    MATCH (p1:Person)-[r1:FROM]-&gt;(e:Email)-[r2:TO]-&gt;(p1:Person)
+    MATCH (p1:Person)-[r1:FROM]->(e:Email)-[r2:TO]->(p1:Person)
     delete r2
 
 ![Model-View-Controller](https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/image/Screen%20Shot%202015-05-19%20at%204.08.43%20PM.png)
@@ -80,11 +79,11 @@ Displaying 35 nodes, 98 relationships.
 Displaying 35 nodes, 66
 relationships.
 
-# filter on date.
+### filter on date.
 -------------------------------------------------------------------------------
 note: there's no Date type built in Neo4j. We can use regular expression here.
 
-MATCH (p1:Person)-[r1:FROM]-&gt;(e:Email)-[r2:TO]-&gt;(p2:Person)
+MATCH (p1:Person)-[r1:FROM]->(e:Email)-[r2:TO]->(p2:Person)
 WHERE p1.id = 1 and p2.id=2 and e.time=~'^1/16/2014.*'
 RETURN p1,e,p2,r1,r2
 
@@ -92,7 +91,7 @@ RETURN p1,e,p2,r1,r2
 
 Displaying 7 nodes, 10 relationships.
 
-# find all path from p1 to p2, order by distance
+### find all path from p1 to p2, order by distance
 -------------------------------------------------------------------------------
 
     MATCH p=(:Person {id: 1})-[r:FROM|:TO*1..5]-(:Person {id : 2 })
@@ -101,10 +100,10 @@ Displaying 7 nodes, 10 relationships.
 
 ![Model-View-Controller](https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/image/Screen%20Shot%202015-05-19%20at%205.40.57%20PM.png)
 
-# find a email with the most receivers
+### find a email with the most receivers
 -------------------------------------------------------------------------------
 
-    MATCH (n:Email)-[r:TO]-&gt;(x)
+    MATCH (n:Email)-[r:TO]->(x)
     RETURN n as Email,
     COUNT(r) as ReceiverNumber
     ORDER BY COUNT(r) DESC
@@ -114,12 +113,13 @@ Displaying 7 nodes, 10 relationships.
 
 This shows some emails are sent to the whole group
 
-# find a person whose emails have the most average receivers
+### find a person whose emails have the most average receivers
 -------------------------------------------------------------------------------
+trying…
 
-# calculate words frequency, "data, Welldead, visit, report, Report, night, GIS" have high rate in the email header.
+### calculate words frequency, "data, Welldead, visit, report, Report, night, GIS" have high rate in the email header.
 -------------------------------------------------------------------------------
-
+trying…
  
 
  
