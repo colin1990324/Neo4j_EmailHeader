@@ -3,7 +3,7 @@ In this project, I try to use Neo4j to manipulate records of Email Headers
 
 Github Repository  [https://github.com/colin1990324/Neo4j_EmailHeader](https://github.com/colin1990324/Neo4j_EmailHeader)
 
-The EmailHeader CSV data is part of VAST2014 Challenge dataset.
+The EmailHeader CSV data is part of [VAST2014 Challenge](http://vacommunity.org/VAST+Challenge+2014) dataset.
 
 ### Data Preprocess
 
@@ -16,7 +16,7 @@ After processing, it comes to 3 files:
   * emails.csv:     emails with id, date, subject.
   * relations.csv   store all sender-from-email-to-receivers relationships.
 
-This separation can help create nodes and relationships in Neo4j.
+This separation can help create nodes and relationships in [Neo4j](http://neo4j.com/download/).
 
 ### clear old nodes and relationships
 -------------------------------------------------------------------------------
