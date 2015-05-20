@@ -96,9 +96,9 @@ relationships.
 -------------------------------------------------------------------------------
 note: there's no Date type built in Neo4j. We can use regular expression here.
 
-MATCH (p1:Person)-[r1:FROM]->(e:Email)-[r2:TO]->(p2:Person)
-WHERE p1.id = 1 and p2.id=2 and e.time=~'^1/16/2014.*'
-RETURN p1,e,p2,r1,r2
+    MATCH (p1:Person)-[r1:FROM]->(e:Email)-[r2:TO]->(p2:Person)
+    WHERE p1.id = 1 and p2.id=2 and e.time=~'^1/16/2014.*'
+    RETURN p1,e,p2,r1,r2
 
 ![Model-View-Controller](https://github.com/colin1990324/Neo4j_EmailHeader/blob/master/data/image/Screen%20Shot%202015-05-19%20at%204.09.56%20PM.png)
 
